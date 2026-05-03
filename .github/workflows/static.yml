@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>植物成语文化知识图谱 · 数据分析看板</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'PingFang SC','Microsoft YaHei',sans-serif;background:#edf2f7;color:#2d3748}
+.header{background:linear-gradient(135deg,#0f2b47,#1a4a6f);color:#fff;padding:36px 24px;text-align:center}
+.header h1{font-size:30px;letter-spacing:2px;margin-bottom:6px}
+.header p{opacity:.78;font-size:14px}
+.stats{display:flex;justify-content:center;gap:20px;margin:-38px auto 30px;max-width:1400px;padding:0 24px;flex-wrap:wrap}
+.card{background:#fff;border-radius:18px;padding:26px 30px;text-align:center;box-shadow:0 6px 24px rgba(0,0,0,.08);min-width:120px;flex:1}
+.card .num{font-size:34px;font-weight:800;color:#1a4a6f}
+.card .lbl{font-size:13px;color:#718096;margin-top:4px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:1500px;margin:0 auto;padding:0 24px 40px}
+.cell{background:#fff;border-radius:20px;padding:20px;box-shadow:0 3px 16px rgba(0,0,0,.05)}
+.cell.full{grid-column:1/-1}
+.cell h3{font-size:16px;color:#1a4a6f;text-align:center;margin-bottom:14px}
+@media(max-width:960px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>🌸 植物成语文化知识图谱 · 初期成果数据分析看板</h1>
+<p>379 条植物成语 · 55 种植物 · 529 次植物引用 · 32 个文化主题 · 10 维度深度分析 | 2026年5月</p>
+</div>
+<div class="stats">
+<div class="card"><div class="num">379</div><div class="lbl">植物成语总数</div></div>
+<div class="card"><div class="num">55</div><div class="lbl">植物种类</div></div>
+<div class="card"><div class="num">32</div><div class="lbl">文化主题数</div></div>
+<div class="card"><div class="num">29</div><div class="lbl">植物科</div></div>
+<div class="card"><div class="num">100%</div><div class="lbl">主题覆盖率</div></div>
+<div class="card"><div class="num">76.25%</div><div class="lbl">出处覆盖率</div></div>
+</div>
+<div class="grid">
+<div class="cell"><h3>📊 植物语素频次 (Top 25)</h3><object data="01_植物频率分布.svg" type="image/svg+xml" style="width:100%"></object></div>
+<div class="cell"><h3>📅 出处朝代分布</h3><object data="02_朝代分布.svg" type="image/svg+xml" style="width:100%"></object></div>
+<div class="cell"><h3>📚 典籍分布 (Top 20)</h3><object data="03_典籍来源分布.svg" type="image/svg+xml" style="width:100%"></object></div>
+<div class="cell"><h3>📖 四部分类</h3><object data="04_四部分类.svg" type="image/svg+xml" style="width:100%"></object></div>
+<div class="cell"><h3>🏷️ 文化主题分类 </h3><object data="05_语义主题分布.svg" type="image/svg+xml" style="width:100%"></object></div>
+<div class="cell"><h3>📝 释义结构类型</h3><object data="06_释义结构分析.svg" type="image/svg+xml" style="width:100%"></object></div>
+<div class="cell"><h3>🔤 成语字数分布</h3><object data="07_成语字数分布.svg" type="image/svg+xml" style="width:100%"></object></div>
+<div class="cell"><h3>🕸️ 植物共现关联网络</h3><object data="08_植物共现网络.svg" type="image/svg+xml" style="width:100%"></object></div>
+<div class="cell full"><h3>📈 各朝代文化主题演化</h3><object data="09_朝代主题演化.svg" type="image/svg+xml" style="width:100%"></object></div>
+<div class="cell"><h3>✅ 数据标注完整性</h3><object data="10_数据标注完整性.svg" type="image/svg+xml" style="width:100%"></object></div>
+</div>
+<p style="text-align:center;color:#a0aec0;padding:20px;font-size:12px">
+  植物成语文化知识图谱项目 · 数据分析<br>
+  <a href="code/analyze.py" style="color:#a0aec0">查看源代码</a>
+</p>
+</body>
+</html>
